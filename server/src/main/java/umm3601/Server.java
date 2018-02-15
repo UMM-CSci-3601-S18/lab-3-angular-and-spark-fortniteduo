@@ -17,6 +17,8 @@ import static spark.debug.DebugScreen.*;
 public class Server {
     public static final String USER_DATA_FILE = "src/main/data/users.json";
     private static Database userDatabase;
+    public static final String TODO_DATA_FILE = "src/main/data/todos.json";
+    private static Database todoDatabase;
 
     public static void main(String[] args) throws IOException {
         final Gson gson = new Gson();
