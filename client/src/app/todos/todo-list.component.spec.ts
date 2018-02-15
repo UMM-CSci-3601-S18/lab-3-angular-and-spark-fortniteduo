@@ -69,7 +69,7 @@ describe('Todo list', () => {
   }));
 
   it('contains all the todos', () => {
-    expect(todoList.users.length).toBe(3);
+    expect(todoList.todos.length).toBe(3);
   });
 
   it('contains a todo with owner named \'Blanche\'', () => {
