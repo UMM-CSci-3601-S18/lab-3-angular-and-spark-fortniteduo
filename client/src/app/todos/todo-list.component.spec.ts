@@ -142,7 +142,14 @@ describe('Todo list', () => {
     const a: Observable<Todo[]> = todoList.refreshTodos();
     a.do(x => Observable.of(x))
       .subscribe(x => expect(todoList.filteredTodos.length).toBe(1));
+  });
 
+  it('todo list filters by the ID of a todo', () => {
+    expect(todoList.filteredTodos.length).toBe(3);
+    todoList.todoId = '58895985c1849992336c219b';
+    const a: Observable<Todo[]> = todoList.refreshTodos();
+    a.do(x => Observable.of(x))
+      .subscribe(x => expect(todoList.filteredTodos.length).toBe(1));
   });
 
 });
