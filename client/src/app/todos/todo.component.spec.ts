@@ -56,7 +56,7 @@ describe('Todo component', () => {
   }));
 
   it('can retrieve Blanches todo by ID', () => {
-    todoComponent.setId('blanche_id');
+    todoComponent.setId('58895985a22c04e761776d54');
     expect(todoComponent.todo).toBeDefined();
     expect(todoComponent.todo.owner).toBe('Blanche');
     expect(todoComponent.todo.status).toBe(false);
