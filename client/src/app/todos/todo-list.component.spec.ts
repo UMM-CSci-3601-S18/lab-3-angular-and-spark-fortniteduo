@@ -128,6 +128,23 @@ describe('Todo list', () => {
       .subscribe(x => expect(todoList.filteredTodos.length).toBe(1));
   });
 
+  it('todo list filters by the word tempor in body', () => {
+    expect(todoList.filteredTodos.length).toBe(3);
+    todoList.todoBody = 'tempor';
+    const a: Observable<Todo[]> = todoList.refreshTodos();
+    a.do(x => Observable.of(x))
+      .subscribe(x => expect(todoList.filteredTodos.length).toBe(2));
+  });
+
+  it('todo list filters by the word sunt in body', () => {
+    expect(todoList.filteredTodos.length).toBe(3);
+    todoList.todoBody = 'sunt';
+    const a: Observable<Todo[]> = todoList.refreshTodos();
+    a.do(x => Observable.of(x))
+      .subscribe(x => expect(todoList.filteredTodos.length).toBe(1));
+
+  });
+
 });
 
 describe('Misbehaving Todo List', () => {
