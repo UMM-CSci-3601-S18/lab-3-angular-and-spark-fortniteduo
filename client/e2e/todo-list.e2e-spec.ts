@@ -65,11 +65,20 @@ describe('Todo list', () => {
   });
 
   // Owner and Category
-  it('should type something in filter by owner box and the filter by category box check that it returned correct element', () => {
+  it('should type something in filter by owner box and the filter by category box and check that it returned correct element', () => {
     page.navigateTo();
     page.typeAOwner("Blanche");
     page.typeACategory("homework");
     expect(page.getUniqueTodo("5889598516c4280a078552fe")).toEqual("Blanche");
+  });
+
+  // Owner, Category, and Body Boxes
+  it('should type something in filter by owner box, filter by category box, and filter by body box and check that it returned correct element', () => {
+    page.navigateTo();
+    page.typeAOwner("Dawn");
+    page.typeACategory("software design");
+    page.typeABody("sunt");
+    expect(page.getUniqueTodo("58895985d8247e22997801c2")).toEqual("Dawn");
   });
 
 });
