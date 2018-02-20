@@ -1,6 +1,6 @@
 <td-layout #layout>
   <td-navigation-drawer flex sidenavTitle="Lab 3">
-    <mat-nav-list>
+    <mat-nav-list class="navbarItems">
       <a mat-list-item [routerLink]="['/']" (click)="layout.close()" routerLinkActive="nav-active"
          [routerLinkActiveOptions]="{exact: true}">
         <mat-icon>home</mat-icon>
@@ -10,7 +10,7 @@
         Users</a>
       <!--This is the route for todos and should be uncommented when used-->
       <a mat-list-item [routerLink]="['/todos']" (click)="layout.close()" routerLinkActive="nav-active">
-        <mat-icon>account_box</mat-icon>
+        <mat-icon>my_location</mat-icon>
         Todos</a>>
     </mat-nav-list>
   </td-navigation-drawer>
