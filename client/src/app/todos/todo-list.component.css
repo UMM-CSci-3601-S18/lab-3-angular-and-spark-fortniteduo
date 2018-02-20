@@ -12,3 +12,17 @@
   padding-right: 14px;
 }
 
+#todo-list-title {
+  font-size: 200%;
+  text-align: center;
+}
+
+.mat-card {
+  background: yellow;
+  text-align: center;
+}
+
+
+.mat-expansion-panel-header{
+  background: rgba(128, 0, 128, 0.23);
+ }

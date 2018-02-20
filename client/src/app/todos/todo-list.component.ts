@@ -57,9 +57,9 @@ export class TodoListComponent implements OnInit {
 
       let status: boolean;
 
-      if (searchStatus === "complete" ) {
+      if (searchStatus === "complete" || searchStatus === "true") {
         status = true;
-      } else if (searchStatus === "incomplete" ) {
+      } else if (searchStatus === "incomplete" || searchStatus === "false") {
         status = false;
       }
 
